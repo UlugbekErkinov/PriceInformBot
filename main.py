@@ -37,7 +37,7 @@ def getP(url):
     soup = BeautifulSoup(Url.content, 'html.parser')
 
     priceContent = soup.find(
-        "a",  class_="Catalog-information-right-block-right-main-top")
+        "span",  class_="Catalog-information-right-block-right-main-top")
     if priceContent:
             price = float(priceContent["content"])
     else:
